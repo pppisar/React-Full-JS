@@ -1,12 +1,9 @@
-import Counter from "./Counter";
-import ReactComponent from "./ReactComponents";
+import MyComponent from "./MyComponent";
 
 function App() {
   return (
     <>
-      <ReactComponent />
-      <hr />
-      <Counter />
+      <MyComponent />
     </>
   );
 }
