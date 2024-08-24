@@ -66,3 +66,31 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+.card {
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 90%, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+}
+
+.card__image {
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card_title {
+  margin: 0;
+}
+
+.card__description {
+  opacity: 80%;
+  margin: 0;
+}
