@@ -1,5 +1,3 @@
-import profileImg from "./assets/profile.jpg";
-
 function ProfilePicture() {
   const imageUrl = "./src/assets/profile.jpg";
 

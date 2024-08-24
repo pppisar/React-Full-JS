@@ -19,3 +19,8 @@
 .profile__image {
   max-width: 300px;
 }
+
+.buttons-container {
+  display: flex;
+  gap: 20px;
+}
