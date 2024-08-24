@@ -15,3 +15,7 @@
   border-radius: 10px;
   margin: 0;
 }
+
+.profile__image {
+  max-width: 300px;
+}
