@@ -1,34 +1,45 @@
 import React, { useState } from "react";
 
 function MyComponent() {
-  const [car, setCar] = useState({
-    year: 2021,
-    make: "Toyota",
-    model: "Supra",
-  });
+  const [foods, setFoods] = useState(["Apple", "Banana", "Orange"]);
 
-  function handleYearChange(event) {
-    setCar((prevCar) => ({ ...prevCar, year: parseInt(event.target.value) }));
+  function handleAddFood() {
+    const inputElement = document.getElementById("foodInput");
+    const inputValue = inputElement.value;
+    inputElement.value = "";
+    setFoods((prevFoods) => [...prevFoods, inputValue]);
   }
 
-  function handleMakeChange(event) {
-    setCar((prevCar) => ({ ...prevCar, make: event.target.value }));
+  function handleRemoveClick(index) {
+    setFoods((prevFoods) => [
+      ...prevFoods.slice(0, index),
+      ...prevFoods.slice(index + 1, prevFoods.length),
+    ]);
+
+    // or
+    // setFoods(prevFoods => prevFoods.filter((_, i) => i!== index));
   }
 
-  function handleModelChange(event) {
-    setCar((prevCar) => ({ ...prevCar, model: event.target.value }));
+  function handleDeleteFood() {
+    const inputElement = document.getElementById("foodInput");
+    const inputValue = inputElement.value;
+    inputElement.value = "";
+    setFoods((prevFoods) => prevFoods.filter((food) => food !== inputValue));
   }
 
   return (
     <div>
-      <p>
-        Your favourite car is: {car.year} {car.make} {car.model}
-      </p>
-      <input onChange={handleYearChange} type="number" value={car.year} />
-      <br />
-      <input onChange={handleMakeChange} type="text" value={car.make} />
-      <br />
-      <input onChange={handleModelChange} type="text" value={car.model} />
+      <h2>List of food:</h2>
+      <ul>
+        {foods.map((food, index) => (
+          <li onClick={() => handleRemoveClick(index)} key={index}>
+            {food}
+          </li>
+        ))}
+      </ul>
+      <input type="text" id="foodInput" placeholder="Enter food name" />
+      <button onClick={handleAddFood}>Add Food</button>
+      <button onClick={handleDeleteFood}>Remove Food</button>
     </div>
   );
 }
