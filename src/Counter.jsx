@@ -4,12 +4,15 @@ function Counter() {
   const [count, setCount] = useState(0);
 
   const incrementCount = () => {
-    // Multiple updates
-    setCount(count + 1);
+    // Multiple updates - updater function pattern
+    // Updater function is a function passed as an argument to setState
+    setCount((prevCount) => prevCount + 1);
+    setCount((prevCount) => prevCount + 1);
+    setCount((prevCount) => prevCount + 1);
   };
 
   const decrementCount = () => {
-    setCount(count - 1);
+    setCount((prevCount) => prevCount - 1);
   };
 
   const resetCount = () => {
