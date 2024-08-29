@@ -1,9 +1,10 @@
-import ToDoList from "./ToDoList.jsx";
+import MyComponent from "./MyComponent";
+import MyComponentCounter from "./MyComponentCounter";
 
 function App() {
   return (
     <>
-      <ToDoList />
+      <MyComponent />
     </>
   );
 }
