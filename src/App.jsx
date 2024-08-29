@@ -1,10 +1,9 @@
-import MyComponent from "./MyComponent";
-import MyComponentCounter from "./MyComponentCounter";
+import DigitalClock from "./DigitalClock";
 
 function App() {
   return (
     <>
-      <MyComponent />
+      <DigitalClock />
     </>
   );
 }

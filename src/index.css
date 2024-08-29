@@ -24,3 +24,18 @@
   display: flex;
   gap: 20px;
 }
+
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.clock {
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: monospace;
+  text-shadow: 3px 3px 5px black;
+  text-align: center;
+}
